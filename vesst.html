@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    margin: 0;
+    background-color: white;
+  }
+
+  .vest-outline {
+    width: 400px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid black;
+    border-radius: 10px;
+  }
+
+  .vest-strap {
+    width: 150px;
+    height: 20px;
+    background-color: black;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: lightgray;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    margin-top: 20px;
+  }
+</style>
+<title>Bulletproof Vest Outline</title>
+</head>
+<body>
+  <div class="vest-outline">
+    <div class="vest-strap"></div>
+  </div>
+  
+  <button class="button">Toggle Strap</button>
+
+  <script>
+    const vestStrap = document.querySelector('.vest-strap');
+    const button = document.querySelector('.button');
+
+    button.addEventListener('click', () => {
+      vestStrap.style.display = vestStrap.style.display === 'none' ? 'block' : 'none';
+    });
+  </script>
+</body>
+</html>
