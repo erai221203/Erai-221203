@@ -1,14 +1,14 @@
 class ram:
     def pro(self):
-        print('asfa')
+        print('Hi from class ram')
 class sam(ram):
     def pro(self):
         super().pro()
-        print('sdg')
-class ki(sam):
+        print('Hi from class sam')
+class kiran(sam):
     def pro(self):
         super().pro()
-        print('asf')
+        print('Hi from class kiran')
 
-o=ki()
-o.pro()
+kiran().pro()
+ram().pro()

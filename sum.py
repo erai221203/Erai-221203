@@ -1,10 +1,14 @@
-'''Write and execute a python function that returns the sum of multiples of 3 and 5 between 0 and limit (parameter).
-For example, if limit is 20, it should return the sum of 3, 5, 6, 9, 10, 12, 15, 18, 20'''
+def get_sum(n):
+    sum = 0
+    while n > 0:
+        sum += n % 10
+        n //= 10
+        
+    return sum
 
-l=int(input('Enter any value:'))
-s = 0
-for i in range(l + 1):
-    if i % 3 == 0 or i % 5 == 0:
-        s += i
-        print(i)
-print('Sum of the given limit of',l,'is',s)
+num = int(input("Enter a number: "))
+while num > 9:
+    num = get_sum(num)
+    print('the order is:') 
+    print(num)
+print("The sum of digits until a single digit is obtained is", num)

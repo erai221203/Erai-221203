@@ -1,3 +1,4 @@
+# function overloading
 class overloading:
     def product(self,*args):
         sum=0
@@ -14,7 +15,6 @@ class overloading:
             print(a+b)   
         else:
                print(a)
-   
 Load=overloading()
-#Load.product(20,10)
+Load.product(20,10)
 Load.product(2,3,4,10) 
